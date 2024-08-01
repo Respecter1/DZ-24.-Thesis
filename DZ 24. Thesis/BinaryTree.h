@@ -12,7 +12,7 @@ private:
 		Node* right;
 	};
 
-	Node* root = nullptr;//корінь
+	Node* root = nullptr;//РєРѕСЂС–РЅСЊ
 
 	//-------------------------
 	// --- Recursive Method ---
@@ -91,7 +91,7 @@ typename void BinaryTree<T>::DoForAllElements(Func function) const
 }
 
 template<typename T>
-typename void BinaryTree<T>::RemoveSubTree(Node* node)//видалення с кінця до корня 
+typename void BinaryTree<T>::RemoveSubTree(Node* node)//РІРёРґР°Р»РµРЅРЅСЏ СЃ РєС–РЅС†СЏ РґРѕ РєРѕСЂРЅСЏ 
 {
 	if (node->left != nullptr)
 	{
@@ -181,9 +181,9 @@ void BinaryTree<T>::CopyTree(Node*& tree1, Node* const& tree2)
 		return;
 	}
 
-	tree1 = new Node{ tree2->data };//тут створюється на кучі вузов значення початкове
-	CopyTree(tree1->left, tree2->left);//лівий вузов 
-	CopyTree(tree1->right, tree2->right);//правий вузов
+	tree1 = new Node{ tree2->data };//С‚СѓС‚ СЃС‚РІРѕСЂСЋС”С‚СЊСЃСЏ РЅР° РєСѓС‡С– РІСѓР·РѕРІ Р·РЅР°С‡РµРЅРЅСЏ РїРѕС‡Р°С‚РєРѕРІРµ
+	CopyTree(tree1->left, tree2->left);//Р»С–РІРёР№ РІСѓР·РѕРІ 
+	CopyTree(tree1->right, tree2->right);//РїСЂР°РІРёР№ РІСѓР·РѕРІ
 
 }
 
@@ -192,7 +192,7 @@ BinaryTree<T>::BinaryTree(std::initializer_list<T> initList)
 {
 	for (const T* value = initList.begin(); value != initList.end(); ++value)
 	{
-		Insert(*value);//вставкою в наше дерево займається мето
+		Insert(*value);//РІСЃС‚Р°РІРєРѕСЋ РІ РЅР°С€Рµ РґРµСЂРµРІРѕ Р·Р°Р№РјР°С”С‚СЊСЃСЏ РјРµС‚Рѕ
 	}
 }
 
@@ -322,7 +322,7 @@ const T* BinaryTree<T>::Find(const T& value) const
 }
 
 template<typename T>
-inline bool BinaryTree<T>::IsEmpty() const//якщо вказівник на корінь не куди не вказує значить дерево пусте
+inline bool BinaryTree<T>::IsEmpty() const//СЏРєС‰Рѕ РІРєР°Р·С–РІРЅРёРє РЅР° РєРѕСЂС–РЅСЊ РЅРµ РєСѓРґРё РЅРµ РІРєР°Р·СѓС” Р·РЅР°С‡РёС‚СЊ РґРµСЂРµРІРѕ РїСѓСЃС‚Рµ
 {
 	return root == nullptr;
 }
