@@ -124,10 +124,10 @@ int main()
 	//}
 #pragma endregion
 
-#pragma region задача як знайти суму
+#pragma region Р·Р°РґР°С‡Р° СЏРє Р·РЅР°Р№С‚Рё СЃСѓРјСѓ
 	std::cout << "\n\n";
 	/*
-		через глобальну змінну можна та функцію
+		С‡РµСЂРµР· РіР»РѕР±Р°Р»СЊРЅСѓ Р·РјС–РЅРЅСѓ РјРѕР¶РЅР° С‚Р° С„СѓРЅРєС†С–СЋ
 	tree1.DoForAllElements(Add);
 
 	std::cout << "\nSum = ";
@@ -139,13 +139,13 @@ int main()
 	std::cout << "\nSum = ";
 	std::cout << Sum::sum << std::endl;
 
-	// ще можно викртись через лямбда функції 
+	// С‰Рµ РјРѕР¶РЅРѕ РІРёРєСЂС‚РёСЃСЊ С‡РµСЂРµР· Р»СЏРјР±РґР° С„СѓРЅРєС†С–С— 
 	double sum1 = 0.0;
 	tree2.DoForAllElements([&sum1](int value) {sum1 += value; });
 	std::cout << "\nSum = ";
 	std::cout << sum1 << std::endl;
 
-	// ще можно викртись через лямбда функції + auto
+	// С‰Рµ РјРѕР¶РЅРѕ РІРёРєСЂС‚РёСЃСЊ С‡РµСЂРµР· Р»СЏРјР±РґР° С„СѓРЅРєС†С–С— + auto
 	auto function = [&sum1](int value) {sum1 += value; };
 	tree2.DoForAllElements(function);
 	std::cout << "\nSum = ";
